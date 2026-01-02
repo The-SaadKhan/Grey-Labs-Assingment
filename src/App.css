@@ -1,0 +1,183 @@
+.App {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.App.dark-mode {
+  background-color: #1a1a2e;
+  color: #eee;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.App.dark-mode .app-header {
+  background: linear-gradient(135deg, #4a5fd7 0%, #5a3a7a 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(20deg) scale(1.1);
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.view-controls {
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.App.dark-mode .view-controls {
+  background: #2d2d44;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.view-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App.dark-mode .view-btn {
+  color: #aaa;
+}
+
+.view-btn:hover {
+  background: #f0f0f0;
+}
+
+.App.dark-mode .view-btn:hover {
+  background: #3d3d54;
+}
+
+.view-btn.active {
+  background: #667eea;
+  color: white;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  margin-left: auto;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+.results-info {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.App.dark-mode .results-info {
+  color: #aaa;
+}
+
+.no-products {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.App.dark-mode .no-products {
+  background: #2d2d44;
+  color: #aaa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-btn {
+    margin-left: 0;
+  }
+}

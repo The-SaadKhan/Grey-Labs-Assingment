@@ -1,0 +1,115 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+  background: white;
+  color: #667eea;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.App.dark-mode .pagination-btn {
+  background: #2d2d44;
+  border-color: #3d3d54;
+  color: #8b9dff;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pagination-number {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #e0e0e0;
+  background: white;
+  color: #666;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App.dark-mode .pagination-number {
+  background: #2d2d44;
+  border-color: #3d3d54;
+  color: #aaa;
+}
+
+.pagination-number:hover {
+  background: #f0f0f0;
+  border-color: #667eea;
+}
+
+.App.dark-mode .pagination-number:hover {
+  background: #3d3d54;
+  border-color: #8b9dff;
+}
+
+.pagination-number.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+}
+
+.pagination-ellipsis {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.App.dark-mode .pagination-ellipsis {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    gap: 0.25rem;
+  }
+
+  .pagination-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .pagination-number {
+    min-width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
+  }
+
+  .pagination-ellipsis {
+    min-width: 2rem;
+    height: 2rem;
+  }
+}
